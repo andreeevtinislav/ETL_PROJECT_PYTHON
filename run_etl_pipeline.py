@@ -15,21 +15,21 @@ logger = logging.getLogger(__name__)
 
 if __name__ == "__main__":
     try:
-        # raw data extraction
+      
         raw_sales_df = extract_sales_data()
         raw_product_df = extract_product_metadata_json()
     except Exception as e:
         logger.error(f"Error during data extraction: {e}")
         raise
     try:
-        # raw data loading
+        
         load_cleaned_sales_table(raw_sales_df)
         load_cleaned_product_metadata_table(raw_product_df)
     except Exception as e:
         logger.error(f"Error during raw data loading: {e}")
         raise
     try:
-        # data cleaning
+        
         cleaned_sales_df = cleaned_sales_data(raw_sales_df)
         cleaned_product_df = cleaned_product_metadata(raw_product_df)
         cleaned_sales_schema.validate(cleaned_sales_df)
@@ -40,13 +40,13 @@ if __name__ == "__main__":
         logger.error(f"Error during data cleaning: {e}")
         raise
     try:
-    # cleaned data loading
+    
         load_cleaned_sales_table(cleaned_sales_df)
         load_cleaned_product_metadata_table(cleaned_product_df)
     except Exception as e:
         logger.error(f"Error during cleaned data loading: {e}")
     try:
-    # analytics data creation
+    
         sales_region_df = sales_by_region(cleaned_sales_df)
         sales_category_region_df = sales_by_category_and_region(cleaned_sales_df, cleaned_product_df)
         sales_by_region_category_schema.validate(sales_region_df)
@@ -55,7 +55,7 @@ if __name__ == "__main__":
     except Exception as e:
         logger.error(f"Error during analytics data creation: {e}")
     try:
-    # analytics data loading
+    
         load_sales_by_region_table(sales_region_df)
         load_sales_by_category_and_region_table(sales_category_region_df)
     except Exception as e:
