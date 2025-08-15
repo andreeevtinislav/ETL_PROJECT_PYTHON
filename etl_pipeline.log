@@ -1,0 +1,16 @@
+2025-08-15 15:03:42,775 - INFO - Sales data extracted from S3 successfully.
+2025-08-15 15:03:42,874 - INFO - Product metadata extracted from S3 successfully.
+2025-08-15 15:03:42,915 - INFO - Snowflake Connector for Python Version: 3.16.0, Python Version: 3.12.7, Platform: macOS-15.4.1-arm64-arm-64bit
+2025-08-15 15:03:42,916 - INFO - Connecting to GLOBAL Snowflake domain
+2025-08-15 15:03:48,171 - INFO - Transformed sales data loaded into Snowflake successfully.
+2025-08-15 15:03:51,195 - INFO - Transformed product metadata loaded into Snowflake successfully.
+2025-08-15 15:03:51,217 - INFO - Cleaned sales data processed successfully.
+2025-08-15 15:03:51,219 - INFO - Cleaned product metadata processed successfully.
+2025-08-15 15:03:51,247 - INFO - Cleaned data validation successful.
+2025-08-15 15:03:54,569 - INFO - Transformed sales data loaded into Snowflake successfully.
+2025-08-15 15:03:57,248 - INFO - Transformed product metadata loaded into Snowflake successfully.
+2025-08-15 15:03:57,262 - INFO - Sales by region data proccessed successfully.
+2025-08-15 15:03:57,270 - INFO - Sales by category and region data processed successfully.
+2025-08-15 15:03:57,280 - INFO - Analytics data validation successful.
+2025-08-15 15:03:59,947 - INFO - Sales by region data loaded into Snowflake successfully.
+2025-08-15 15:04:02,729 - INFO - Sales by category and region data loaded into Snowflake successfully.
